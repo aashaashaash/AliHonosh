@@ -425,22 +425,24 @@ html,body{
 <div class="dropdown" id="dropdown"></div>
 </div>
 <!-- بداية السلايدر -->
-<section id="image-carousel">
-  <button class="prev-btn" type="button" onclick="prevImage()">‹</button>
+<!-- بداية السلايدر -->
+<section id="image-carousel" dir="rtl">
+  <button class="prev-btn" onclick="prevImage()">‹</button>
 
   <div id="carousel-inner">
-    <!-- 1) شريحة OneDrive -->
-<div class="carousel-slide">
-  <button class="slide-hit" type="button"
-          onclick="filterByMainCategory('منتجات طبية')"
-          aria-label="منتجات طبية">
-    <img class="carousel-img cover"
-         src="asset/banner/medical-hero-1000x300.jpg"
-         alt="عناية طبية ... جمالك يستحق الأفضل!"
-         loading="eager" fetchpriority="high" decoding="async">
-    <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
-  </button>
-</div>
+    <!-- الشريحة 1: من GitHub Pages -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('منتجات طبية')" aria-label="منتجات طبية">
+        <img
+          class="carousel-img cover"
+          src="asset/banner/medical-hero-1000x300.jpg?v=1"
+          alt="عناية طبية — جمالك يستحق الأفضل!"
+          width="1000" height="300"
+          loading="eager" fetchpriority="high" decoding="async"
+        >
+        <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
+      </button>
+    </div>
 
     <!-- 2) مقاوم للماء -->
     <div class="carousel-slide">
@@ -489,10 +491,10 @@ html,body{
         <div class="slide-label no-bg-label">🔥 "الكل يحبها... الأكثر مبيعًا تستحق التجربة!"</div>
       </button>
     </div>
-  </div>
+ </div>
 
   <div class="carousel-dots" id="carousel-dots"></div>
-  <button class="next-btn" type="button" onclick="nextImage()">›</button>
+  <button class="next-btn" onclick="nextImage()">›</button>
 </section>
 <!-- نهاية السلايدر -->
 
