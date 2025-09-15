@@ -429,69 +429,94 @@ html,body{
 <section id="image-carousel" dir="rtl">
   <button class="prev-btn" onclick="prevImage()">‹</button>
 
-  <div id="carousel-inner">
-    <!-- الشريحة 1: من GitHub Pages -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('منتجات طبية')" aria-label="منتجات طبية">
-        <img
-          class="carousel-img cover"
-          src="asset/banner/medical-hero-1000x300.jpg?v=1"
-          alt="عناية طبية — جمالك يستحق الأفضل!"
-          width="1000" height="300"
-          loading="eager" fetchpriority="high" decoding="async"
-        >
-        <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
-      </button>
-    </div>
+ <div id="carousel-inner">
 
-    <!-- 2) مقاوم للماء -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('مقاوم للماء')" aria-label="مقاوم للماء">
-        <img class="carousel-img cover" src="https://i.ibb.co/tT6zwm3h/image.jpg" alt="ثبات يدوم - مقاوم للماء" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">💧 "ثبات يدوم... مقاومة للماء، مقاومة لكل شيء!"</div>
-      </button>
-    </div>
+  <!-- 1) منتجات طبية -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('منتجات طبية')" aria-label="منتجات طبية">
+      <img class="carousel-img cover"
+           src="asset/banner/medical-hero-1000x300.jpg?v=1"
+           alt="عناية طبية — جمالك يستحق الأفضل!"
+           width="1000" height="300"
+           loading="eager" fetchpriority="high" decoding="async">
+      <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
+    </button>
+  </div>
 
-    <!-- 3) عضوي -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('عضوي')" aria-label="عضوي">
-        <img class="carousel-img cover" src="https://i.ibb.co/Rp3FR2bD/image.jpg" alt="جمالك طبيعي مثل مكوناتنا" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">🌿 "جمالك طبيعي… مثل مكوناتنا🌱من الطبيعة... إليكِ مباشرة."</div>
-      </button>
-    </div>
+  <!-- 2) مقاوم للماء -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('مقاوم للماء')" aria-label="مقاوم للماء">
+      <img class="carousel-img cover"
+           src="asset/banner/photo_2025-07-27_15-43-03.jpg"
+           alt="ثبات يدوم - مقاوم للماء"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">💧 "ثبات يدوم... مقاومة للماء، مقاومة لكل شيء!"</div>
+    </button>
+  </div>
 
-    <!-- 4) إصدار محدود -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('اصدار محدود')" aria-label="اصدار محدود">
-        <img class="carousel-img cover" src="https://i.ibb.co/bgjTVhQh/image.jpg" alt="إصدار محدود" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">✨ ⏳ "إصدار محدود... الجمال لا ينتظر!"</div>
-      </button>
-    </div>
+  <!-- 3) عضوي -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('عضوي')" aria-label="عضوي">
+      <img class="carousel-img cover"
+           src="asset/banner/organic-hero.jpg"
+           alt="جمالك طبيعي مثل مكوناتنا"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">🌿 "جمالك طبيعي… من الطبيعة... إليكِ مباشرة."</div>
+    </button>
+  </div>
 
-    <!-- 5) روتين -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('روتين')" aria-label="روتين">
-        <img class="carousel-img cover" src="https://i.ibb.co/PZXkD2TL/image.jpg" alt="روتينك الجمالي يبدأ من هنا" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">✨ "روتينك الجمالي يبدأ من هنا... سر التألق كل يوم!"</div>
-      </button>
-    </div>
+  <!-- 4) إصدار محدود -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('اصدار محدود')" aria-label="اصدار محدود">
+      <img class="carousel-img cover"
+           src="asset/banner/limited-hero.jpg"
+           alt="إصدار محدود"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">✨ ⏳ "إصدار محدود... الجمال لا ينتظر!"</div>
+    </button>
+  </div>
 
-    <!-- 6) عرض خاص -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('عرض خاص')" aria-label="عرض خاص">
-        <img class="carousel-img cover" src="https://i.ibb.co/7xdjqVCq/image.jpg" alt="عروض خاصة" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">"لاتفوتينها ... عروضنا الخاصة ... جمال بسعر ذهبي!"🎉</div>
-      </button>
-    </div>
+  <!-- 5) روتين -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('روتين')" aria-label="روتين">
+      <img class="carousel-img cover"
+           src="asset/banner/routine-hero.jpg"
+           alt="روتينك الجمالي يبدأ من هنا"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">✨ "روتينك الجمالي يبدأ من هنا... سر التألق كل يوم!"</div>
+    </button>
+  </div>
 
-    <!-- 7) الأكثر مبيعًا (PNG/شعار) -->
-    <div class="carousel-slide">
-      <button class="slide-hit" type="button" onclick="filterByMainCategory('الاكثر مبيعا')" aria-label="الاكثر مبيعا">
-        <img class="carousel-img contain" src="https://i.ibb.co/q3TJ1bLj/khonash-bg-1000x300.png" alt="الأكثر مبيعًا" loading="lazy" decoding="async" />
-        <div class="slide-label no-bg-label">🔥 "الكل يحبها... الأكثر مبيعًا تستحق التجربة!"</div>
-      </button>
-    </div>
- </div>
+  <!-- 6) عرض خاص -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('عرض خاص')" aria-label="عرض خاص">
+      <img class="carousel-img cover"
+           src="asset/banner/special-offer-hero.jpg"
+           alt="عروض خاصة"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">"لاتفوتينها ... عروضنا الخاصة ... جمال بسعر ذهبي!" 🎉</div>
+    </button>
+  </div>
+
+  <!-- 7) الأكثر مبيعًا -->
+  <div class="carousel-slide">
+    <button class="slide-hit" type="button" onclick="filterByMainCategory('الاكثر مبيعا')" aria-label="الاكثر مبيعا">
+      <img class="carousel-img contain"
+           src="asset/banner/bestseller-hero.png"
+           alt="الأكثر مبيعًا"
+           width="1000" height="300"
+           loading="lazy" decoding="async">
+      <div class="slide-label no-bg-label">🔥 "الكل يحبها... الأكثر مبيعًا تستحق التجربة!"</div>
+    </button>
+  </div>
+
+</div>
+
 
   <div class="carousel-dots" id="carousel-dots"></div>
   <button class="next-btn" onclick="nextImage()">›</button>
