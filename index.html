@@ -1604,46 +1604,7 @@ function renderFilteredProducts(filteredList) {
   document.getElementById('product-list').innerHTML = html;
 }
 </script>
-<script>
-let currentImage = 0;
-const images = document.querySelectorAll('#carousel-inner img');
-const totalImages = images.length;
 
-function updateCarousel() {
-  const carouselInner = document.getElementById('carousel-inner');
-  if (!carouselInner) return;
-  carouselInner.style.transform = `translateX(-${currentImage * 100}%)`;
-
-  const dots = document.querySelectorAll('#carousel-dots span');
-  dots.forEach((dot, index) => {
-    dot.style.opacity = index === currentImage ? '1' : '0.4';
-  });
-}
-
-function nextImage() {
-  currentImage = (currentImage + 1) % totalImages;
-  updateCarousel();
-}
-
-function prevImage() {
-  currentImage = (currentImage - 1 + totalImages) % totalImages;
-  updateCarousel();
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const dotsContainer = document.getElementById('carousel-dots');
-  for (let i = 0; i < totalImages; i++) {
-    const dot = document.createElement('span');
-    dot.style.cssText = 'display:inline-block;width:10px;height:10px;margin:0 4px;border-radius:50%;background:#d81b60;opacity:0.4;cursor:pointer;';
-    dot.addEventListener('click', function() {
-      currentImage = i;
-      updateCarousel();
-    });
-    dotsContainer.appendChild(dot);
-  }
-  updateCarousel();
-});
-</script>
 <script>
 // عند الضغط على زر المفضلة
 document.getElementById("favBtn")?.addEventListener("click", function () {
