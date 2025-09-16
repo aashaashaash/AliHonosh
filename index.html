@@ -424,44 +424,101 @@ html,body{
 </button>
 <div class="dropdown" id="dropdown"></div>
 </div>
-<!-- بداية السلايدر -->
-<!-- بداية السلايدر -->
-<section id="image-carousel" dir="rtl">
-  <button class="prev-btn" onclick="prevImage()">‹</button>
+<section id="image-carousel">
+  <button class="prev-btn" type="button" onclick="prevImage()">‹</button>
 
- <div id="carousel-inner">
+  <div id="carousel-inner">
 
-  <!-- 1) منتجات طبية -->
-  <div class="carousel-slide">
-    <button class="slide-hit" type="button" onclick="filterByMainCategory('منتجات طبية')" aria-label="منتجات طبية">
-      <img class="carousel-img cover"
-           src="asset/banner/medical-hero-1000x300.jpg?v=1"
-           alt="عناية طبية — جمالك يستحق الأفضل!"
-           width="1000" height="300"
-           loading="eager" fetchpriority="high" decoding="async">
-      <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
-    </button>
+    <!-- 1) aaaa.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('طبية')" aria-label="طبية">
+        <img class="carousel-img cover"
+             src="asset/banner/aaaa.jpg"
+             alt="عناية طبية"
+             width="1000" height="300"
+             loading="eager" fetchpriority="high" decoding="async">
+        <div class="slide-label no-bg-label">🛡️ "عناية طبية ... جمالك يستحق الأفضل!"</div>
+      </button>
+    </div>
+
+    <!-- 2) aaaa - Copy.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('مقاوم للماء')" aria-label="مقاوم للماء">
+        <img class="carousel-img cover"
+             src="asset/banner/aaaa - Copy.jpg"
+             alt="مقاوم للماء"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">💧 "ثبات يدوم... مقاومة للماء، مقاومة لكل شيء!"</div>
+      </button>
+    </div>
+
+    <!-- 3) aaaa - Copy - Copy.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('عضوي')" aria-label="عضوي">
+        <img class="carousel-img cover"
+             src="asset/banner/aaaa - Copy - Copy.jpg"
+             alt="منتجات عضوية"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">🌿 "جمالك طبيعي… من الطبيعة مباشرة!"</div>
+      </button>
+    </div>
+
+    <!-- 4) aaaa - Copy - Copy - Copy.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('إصدار محدود')" aria-label="إصدار محدود">
+        <img class="carousel-img cover"
+             src="asset/banner/aaaa - Copy - Copy - Copy.jpg"
+             alt="إصدار محدود"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">⏳✨ "إصدار محدود... الجمال لا ينتظر!"</div>
+      </button>
+    </div>
+
+    <!-- 5) photo_2025-07-27_15-43-03.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('روتين')" aria-label="روتين">
+        <img class="carousel-img cover"
+             src="asset/banner/photo_2025-07-27_15-43-03.jpg"
+             alt="روتين جمالي"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">✨ "روتينك الجمالي يبدأ من هنا!"</div>
+      </button>
+    </div>
+
+    <!-- 6) medical-hero-1000x300.jpg -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('عرض خاص')" aria-label="عرض خاص">
+        <img class="carousel-img cover"
+             src="asset/banner/medical-hero-1000x300.jpg"
+             alt="عرض خاص"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">🎉 "عروض خاصة... جمال بسعر ذهبي!"</div>
+      </button>
+    </div>
+
+    <!-- 7) aaaa - Copy - Copy - Copy - Copy.jpg (إذا كان موجود) -->
+    <div class="carousel-slide">
+      <button class="slide-hit" type="button" onclick="filterByMainCategory('الأكثر مبيعًا')" aria-label="الأكثر مبيعًا">
+        <img class="carousel-img cover"
+             src="asset/banner/aaaa - Copy - Copy - Copy - Copy.jpg"
+             alt="الأكثر مبيعًا"
+             width="1000" height="300"
+             loading="lazy" decoding="async">
+        <div class="slide-label no-bg-label">🔥 "الأكثر مبيعًا... الكل يحبها!"</div>
+      </button>
+    </div>
+
   </div>
-
-  <!-- 2) مقاوم للماء -->
-  <div class="carousel-slide">
-    <button class="slide-hit" type="button" onclick="filterByMainCategory('مقاوم للماء')" aria-label="مقاوم للماء">
-      <img class="carousel-img cover"
-           src="asset/banner/photo_2025-07-27_15-43-03.jpg"
-           alt="ثبات يدوم - مقاوم للماء"
-           width="1000" height="300"
-           loading="lazy" decoding="async">
-      <div class="slide-label no-bg-label">💧 "ثبات يدوم... مقاومة للماء، مقاومة لكل شيء!"</div>
-    </button>
-  </div>
-
-</div>
-
 
   <div class="carousel-dots" id="carousel-dots"></div>
-  <button class="next-btn" onclick="nextImage()">›</button>
+  <button class="next-btn" type="button" onclick="nextImage()">›</button>
 </section>
-<!-- نهاية السلايدر -->
+
 
 
 
