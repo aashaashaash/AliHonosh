@@ -1514,7 +1514,8 @@ document.addEventListener("mousedown", function(e) {
     });
   </script>
 </div>
-<script>document.getElementById('healthTestBtn').onclick = function() { window.open('https://forms.gle/H7VShuJz1aGbaGS37', '_blank'); };</script>
+<script>
+	document.getElementById('healthTestBtn').onclick = function() { window.open('https://forms.gle/H7VShuJz1aGbaGS37', '_blank'); };</script>
 <script>
 document.getElementById('searchInput').addEventListener('input', function () {
   const keyword = this.value.trim().toLowerCase();
@@ -1770,117 +1771,8 @@ function filterByMainCategory(badge) {
   renderProducts();
 }
 </script>
-<script>
-let totalSlides = document.querySelectorAll(".carousel-slide").length;
-let currentSlide = 0;
-let slides = document.querySelectorAll('.carousel-slide');
-let slideInterval;
 
-function updateCarouselWidth() {
-  const slides = document.querySelectorAll(".carousel-slide");
-  const inner = document.getElementById("carousel-inner");
-  inner.style.width = `${slides.length * 100}%`;
-  slides.forEach(slide => {
-  slide.style.flex = "0 0 100%";
-  });
-}
 
-function showSlide(index) {
-  const totalSlides = slides.length;
-  if (index >= totalSlides) currentSlide = 0;
-  else if (index < 0) currentSlide = totalSlides - 1;
-  else currentSlide = index;
-
-  slides.forEach((slide, i) => {
-    slide.style.display = i === currentSlide ? 'block' : 'none';
-  });
-}
-
-function nextImage() {
-  showSlide(currentSlide + 1);
-}
-
-function prevImage() {
-  showSlide(currentSlide - 1);
-}
-
-function createDots() {
-  const dotContainer = document.createElement("div");
-  dotContainer.className = "carousel-dots";
-  const slides = document.querySelectorAll(".carousel-slide");
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.className = "dot" + (i === 0 ? " active" : "");
-    dot.addEventListener("click", () => showSlide(i));
-    dotContainer.appendChild(dot);
-  });
-
-  document.getElementById("image-carousel").appendChild(dotContainer);
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  slides = document.querySelectorAll('.carousel-slide');
-  showSlide(currentSlide);
-  setInterval(nextImage, 4000);
-});
-</script>
-<script>
-let currentSlide = 0;
-
-function updateCarouselWidth() {
-  const slides = document.querySelectorAll(".carousel-slide");
-  const inner = document.getElementById("carousel-inner");
-  inner.style.width = `${slides.length * 100}%`;
-  inner.style.display = "flex";
-  slides.forEach(slide => {
-    slide.style.minWidth = "100%";
-    slide.style.boxSizing = "border-box";
-  });
-}
-
-function showSlide(index) {
-  const track = document.getElementById("carousel-inner");
-  const slides = document.querySelectorAll(".carousel-slide");
-  const dots = document.querySelectorAll(".dot");
-
-  if (!slides.length) return;
-  currentSlide = (index + slides.length) % slides.length;
-  const offset = -currentSlide * 100;
-  track.style.transform = `translateX(${offset}%)`;
-
-  dots.forEach(dot => dot.classList.remove("active"));
-  if (dots[currentSlide]) dots[currentSlide].classList.add("active");
-}
-
-function nextImage() { showSlide(currentSlide + 1); }
-function prevImage() { showSlide(currentSlide - 1); }
-
-function createDots() {
-  const dotContainer = document.createElement("div");
-  dotContainer.className = "carousel-dots";
-  const slides = document.querySelectorAll(".carousel-slide");
-  slides.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.className = "dot" + (i === 0 ? " active" : "");
-    dot.addEventListener("click", () => showSlide(i));
-    dotContainer.appendChild(dot);
-  });
-  document.getElementById("image-carousel").appendChild(dotContainer);
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  updateCarouselWidth();
-  showSlide(0);
-  createDots();
-  let slideInterval = setInterval(nextImage, 4000);
-  const carousel = document.getElementById("image-carousel");
-  carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
-  carousel.addEventListener("mouseleave", () => {
-    slideInterval = setInterval(nextImage, 4000);
-  });
-});
-</script>
 <script>
 let currentSlide = 0;
 let interval;
