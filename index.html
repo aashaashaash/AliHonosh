@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
@@ -333,36 +332,89 @@ html,body{
 /* =======================
    Carousel (Banners)
 ======================= */
-#image-carousel{ position:relative; width:100%; overflow:hidden; margin:0 0 var(--space-sm); }
-#carousel-inner{ display:flex; transition:transform .5s ease-in-out; width:100%; will-change:transform; }
-.carousel-slide{ position:relative; min-width:100%; flex:0 0 100%; aspect-ratio:1000/300; }
-
-.carousel-img{
-  width:100%; height:100%;
-  object-fit:cover; display:block;
+/* =======================
+   Carousel (Banners)
+======================= */
+#image-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 var(--space-sm);
 }
 
-.carousel-dots{ text-align:center; margin-top:8px; }
-.dot{
-  display:inline-block; width:10px; height:10px; margin:4px; background:#bbb; border-radius:50%;
-  cursor:pointer; transition:background-color .3s ease;
+#carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  will-change: transform;
 }
-.dot.active{ background:var(--brand); }
 
-.prev-btn,.next-btn{
-  position:absolute; top:50%; transform:translateY(-50%);
-  background:rgba(255,255,255,.8); border:none; font-size:2rem; padding:0 10px; color:var(--brand);
-  cursor:pointer; z-index:2;
+.carousel-slide {
+  position: relative;
+  min-width: 100%;
+  flex: 0 0 100%;
+  aspect-ratio: 1000/300;   /* يحافظ على النسبة 3:1 */
+  overflow: hidden;
 }
-.prev-btn{ left:10px; } .next-btn{ right:10px; }
 
-/* نص البنر */
-.slide-label.no-bg-label{
-  position:absolute; left:6%; bottom:12%;
-  color:#000; font-weight:bold; font-family:'Tajawal',sans-serif;
-  background:none; box-shadow:none; max-width:40%; line-height:1.4;
-  user-select:none; font-size:clamp(14px,3vw,30px);
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+/* النقاط */
+.carousel-dots {
+  text-align: center;
+  margin-top: 8px;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+.dot.active {
+  background: var(--brand);
+}
+
+/* الأسهم */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.8);
+  border: none;
+  font-size: 2rem;
+  padding: 0 10px;
+  color: var(--brand);
+  cursor: pointer;
+  z-index: 2;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* النص داخل السلايد */
+.slide-label.no-bg-label {
+  position: absolute;
+  left: 6%;
+  bottom: 12%;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Tajawal', sans-serif;
+  background: none;
+  box-shadow: none;
+  max-width: 40%;
+  line-height: 1.4;
+  user-select: none;
+  font-size: clamp(14px, 3vw, 30px);
+}
+
 
 /* أسهم بديلة */
 .arrow{
